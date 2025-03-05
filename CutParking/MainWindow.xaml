@@ -1,0 +1,57 @@
+﻿<Window x:Class="CutParking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CutParking"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="CUTPark" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        materialDesign:ColorZoneAssist.Mode="PrimaryMid">
+
+    <Grid Background="{DynamicResource MaterialDesignPaper}">
+
+        <!-- Snackbar -->
+        <materialDesign:Snackbar x:Name="SnackbarMensaje" MessageQueue="{x:Static local:MainWindow.MessageQueue}"/>
+
+        <!-- Encabezado -->
+        <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" DockPanel.Dock="Top" Margin="2,9,-2,395">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
+                <materialDesign:PackIcon Kind="Car" Width="50" Height="50" Foreground="White"/>
+                <TextBlock Text="CUTParking" FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Contenedor Central -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+            <materialDesign:Card Padding="20" RenderTransformOrigin="0.518,0.782">
+
+                <StackPanel>
+                    <Button Content="Iniciar Sesión"
+                            Style="{StaticResource MaterialDesignRaisedButton}" 
+                            Margin="0,10,0,10"
+                            Background="{DynamicResource PrimaryHueMidBrush}"
+                            Height="40"
+                            Click="IniciarSesion_Click"/>
+
+                    <Button Content="Registrarse"
+                            Style="{StaticResource MaterialDesignRaisedButton}" 
+                            Margin="0,10,0,10"
+                            Background="{DynamicResource PrimaryHueMidBrush}"
+                            Height="40"
+                            Click="Registrarse_Click"/>
+
+                    <Button Content="Salir"
+                            Style="{StaticResource MaterialDesignRaisedButton}" 
+                            Margin="0,10,0,10"
+                            Background="{DynamicResource PrimaryHueMidBrush}"
+                            Height="40"
+                            Click="Salir_Click"/>
+                </StackPanel>
+
+            </materialDesign:Card>
+        </StackPanel>
+
+    </Grid>
+</Window>
