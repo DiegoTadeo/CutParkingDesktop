@@ -42,7 +42,7 @@
                             Height="40"
                             Click="Registrarse_Click"/>
 
-                    <Button Content="Salir"
+                    <Button Content="Terminar"
                             Style="{StaticResource MaterialDesignRaisedButton}" 
                             Margin="0,10,0,10"
                             Background="{DynamicResource PrimaryHueMidBrush}"
