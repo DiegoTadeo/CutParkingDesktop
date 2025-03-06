@@ -18,7 +18,7 @@
         <!-- Encabezado -->
         <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" DockPanel.Dock="Top" Margin="2,9,-2,395">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                <materialDesign:PackIcon Kind="Car" Width="50" Height="50" Foreground="White"/>
+                <Image Source="pack://application:,,,/Assets/Logo.jpg" Width="50" Height="50"/>
                 <TextBlock Text="CUTParking" FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
         </DockPanel>
