@@ -18,40 +18,38 @@
         <!-- Encabezado -->
         <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" DockPanel.Dock="Top" Margin="2,9,-2,395">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                <materialDesign:PackIcon Kind="Car" Width="50" Height="50" Foreground="White"/>
+                <Image Width="50" Height="50" Source="/logo.jpg"/>
                 <TextBlock Text="CUTParking" FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
         </DockPanel>
 
-        <!-- Contenedor Central -->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
-            <materialDesign:Card Padding="20" RenderTransformOrigin="0.518,0.782">
+        <!-- Contenedor Central usando Canvas -->
+        <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-                <StackPanel>
-                    <Button Content="Iniciar Sesión"
-                            Style="{StaticResource MaterialDesignRaisedButton}" 
-                            Margin="0,10,0,10"
-                            Background="{DynamicResource PrimaryHueMidBrush}"
-                            Height="40"
-                            Click="IniciarSesion_Click"/>
+            <!-- Botón de Iniciar Sesión -->
+            <Button Content="Iniciar Sesión"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Background="White"
+                    Height="62"
+                    Click="IniciarSesion_Click"
+                    Canvas.Left="342" Canvas.Top="180" Width="172" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
-                    <Button Content="Registrarse"
-                            Style="{StaticResource MaterialDesignRaisedButton}" 
-                            Margin="0,10,0,10"
-                            Background="{DynamicResource PrimaryHueMidBrush}"
-                            Height="40"
-                            Click="Registrarse_Click"/>
+            <!-- Botón de Registrarse -->
+            <Button Content="Registrarse"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Background="White"
+                    Height="58"
+                    Click="Registrarse_Click"
+                    Canvas.Left="342" Canvas.Top="292" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172"/>
 
-                    <Button Content="Terminar"
-                            Style="{StaticResource MaterialDesignRaisedButton}" 
-                            Margin="0,10,0,10"
-                            Background="{DynamicResource PrimaryHueMidBrush}"
-                            Height="40"
-                            Click="Salir_Click"/>
-                </StackPanel>
+            <!-- Botón de Salir (Terminar) -->
+            <Button Content="Terminar"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Background="White"
+                    Height="55"
+                    Click="Salir_Click"
+                    Canvas.Left="665" Canvas.Top="419" Width="112"/>
 
-            </materialDesign:Card>
-        </StackPanel>
-
+        </Canvas>
     </Grid>
 </Window>

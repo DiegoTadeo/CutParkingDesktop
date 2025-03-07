@@ -21,7 +21,9 @@ namespace CutParking
 
         private void IniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            MessageQueue.Enqueue("Iniciando sesión...");
+            InicioSesion inicioSesion = new InicioSesion();
+            inicioSesion.Show();
+            this.Hide();
         }
 
         private void Registrarse_Click(object sender, RoutedEventArgs e)
