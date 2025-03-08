@@ -16,12 +16,6 @@
         <materialDesign:Snackbar x:Name="SnackbarMensaje" MessageQueue="{x:Static local:MainWindow.MessageQueue}"/>
 
         <!-- Encabezado -->
-        <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" DockPanel.Dock="Top" Margin="2,9,-2,395">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                <Image Width="50" Height="50" Source="/logo.jpg"/>
-                <TextBlock Text="CUTParking" FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
-            </StackPanel>
-        </DockPanel>
 
         <!-- Contenedor Central usando Canvas -->
         <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -43,12 +37,18 @@
                     Canvas.Left="342" Canvas.Top="292" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172"/>
 
             <!-- Botón de Salir (Terminar) -->
-            <Button Content="Terminar"
+            <Button Content="Salir"
                     Style="{StaticResource MaterialDesignRaisedButton}"
                     Background="White"
                     Height="55"
                     Click="Salir_Click"
-                    Canvas.Left="665" Canvas.Top="419" Width="112"/>
+                    Canvas.Left="649" Canvas.Top="400" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" Canvas.Left="2" Canvas.Top="9.02" Width="800">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <Image Width="50" Height="50" Source="/Assets/logo.jpg"/>
+                    <TextBlock FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" Text="CUTParking"/>
+                </StackPanel>
+            </DockPanel>
 
         </Canvas>
     </Grid>

@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="InicioSesion" Height="450" Width="800">
     <Grid>
+        <!-- Botón de Salir (Terminar) -->
+        <Button Content="Regresar"
+        Style="{StaticResource MaterialDesignRaisedButton}"
+        Background="White"
+        Height="55"
+        Click="Salir_Click"
+        Canvas.Left="665" Canvas.Top="419" Width="112" Margin="626,320,62,59"/>
         <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" Margin="2,9,-2,345">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
                 <TextBlock FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" Text="Bienvenido, Usuario"/>

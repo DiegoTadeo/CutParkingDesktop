@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\logo.jpg" />
+    <None Remove="logo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
