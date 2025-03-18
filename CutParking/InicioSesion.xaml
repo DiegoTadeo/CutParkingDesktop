@@ -4,21 +4,53 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CutParking"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="InicioSesion" Height="450" Width="800">
-    <Grid>
+        Title="InicioSesion" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Canvas>
         <!-- Botón de Salir (Terminar) -->
         <Button Content="Regresar"
-        Style="{StaticResource MaterialDesignRaisedButton}"
-        Background="White"
-        Height="55"
-        Click="Salir_Click"
-        Canvas.Left="665" Canvas.Top="419" Width="112" Margin="626,320,62,59"/>
-        <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" Margin="2,9,-2,345">
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Background="White"
+                Height="54"
+                Click="Salir_Click"
+                Width="112"
+                Canvas.Left="659"
+                Canvas.Top="22"
+                Canvas.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <!-- Encabezado -->
+        <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" Canvas.Top="9" HorizontalAlignment="Left" VerticalAlignment="Center" Width="800">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
                 <TextBlock FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" Text="Bienvenido, Usuario"/>
             </StackPanel>
         </DockPanel>
 
-    </Grid>
+        <!-- Barra de navegación inferior -->
+        <DockPanel VerticalAlignment="Bottom" Height="60" Background="{DynamicResource MaterialDesignPaper}" Canvas.Bottom="0">
+            <Button x:Name="inicio" DockPanel.Dock="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="116" Click="inicio_Click">
+                Inicio
+            </Button>
+
+            <Button x:Name="vehiculos" DockPanel.Dock="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="127" Click="vehiculos_Click">
+                Vehiculos
+            </Button>
+
+            <Button x:Name="reservar" DockPanel.Dock="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="119" Click="reservar_Click">
+                Reservar
+            </Button>
+
+            <Button x:Name="mi_Perfil" DockPanel.Dock="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="140" Click="Button_Click">
+                Mi perfil
+            </Button>
+        </DockPanel>
+
+        <ContentControl Name="MainContent" Canvas.Top="100" Canvas.Left="10" Width="780" Height="269" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Seleccione una opción" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </ContentControl>
+
+    </Canvas>
 </Window>

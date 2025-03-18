@@ -22,6 +22,7 @@ namespace CutParking
         public InicioSesion()
         {
             InitializeComponent();
+            inicio_Click(null, null);
         }
 
         private void Salir_Click(object sender, RoutedEventArgs e)
@@ -29,6 +30,50 @@ namespace CutParking
             MainWindow principal = new MainWindow();
             principal.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //MiPerfil
+        {
+            MainContent.Content = new TextBlock
+            {
+                Text = "Contenido de Cuenta",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontSize = 20
+            };
+        }
+
+        private void reservar_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new TextBlock
+            {
+                Text = "Contenido de Reservar",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontSize = 20
+            };
+        }
+
+        private void vehiculos_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new TextBlock
+            {
+                Text = "Contenido de Vehiculos",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontSize = 20
+            };
+        }
+
+        private void inicio_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new TextBlock
+            {
+                Text = "Contenido de Inicio",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontSize = 20
+            };
         }
     }
 }

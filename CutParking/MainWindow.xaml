@@ -18,21 +18,29 @@
         <!-- Contenedor Central usando Canvas -->
         <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
+            <TextBlock Text="buscando estacionamiento" 
+                   FontSize="36" 
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource PrimaryHueMidBrush}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Left="-27" Canvas.Top="-14">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="100" Y="200"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
             <!-- Botón de Iniciar Sesión -->
-            <Button Content="Iniciar Sesión"
+            <Button Content="Iniciar Sesión con Google"
                     Style="{StaticResource MaterialDesignRaisedButton}"
                     Background="White"
                     Height="62"
                     Click="IniciarSesion_Click"
-                    Canvas.Left="342" Canvas.Top="180" Width="172" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-
-            <!-- Botón de Registrarse -->
-            <Button Content="Registrarse"
-                    Style="{StaticResource MaterialDesignRaisedButton}"
-                    Background="White"
-                    Height="58"
-                    Click="Registrarse_Click"
-                    Canvas.Left="342" Canvas.Top="292" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172"/>
+                    Canvas.Left="300" Canvas.Top="268" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
             <!-- Botón de Salir (Terminar) -->
             <Button Content="Salir"
@@ -42,15 +50,39 @@
                     Click="Salir_Click"
                     Canvas.Left="649" Canvas.Top="400" Width="112" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
+            <TextBlock Text="Ahorremos tiempo" 
+                FontSize="36" 
+                FontWeight="Bold"
+                Foreground="{DynamicResource MaterialDesignBody}"
+                RenderTransformOrigin="0.5,0.5" Canvas.Left="-71" Canvas.Top="-63" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="100" Y="200"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+
         </Canvas>
 
         <!-- Encabezado  -->
         <DockPanel Background="{DynamicResource PrimaryHueMidBrush}" Height="80" Canvas.Left="2" Canvas.Top="9.02" Width="800" Margin="0,10,0,394">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
-                <Image Width="50" Height="50" Source="/Assets/logo.jpg"/>
-                <TextBlock FontSize="26" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" Text="CUTParking"/>
+                <Image Width="77" Height="80" Source="/Assets/logo.jpg"/>
+                <TextBlock FontSize="26" FontWeight="Bold" Foreground="White" Text="Bienvenido a CUTParking" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="15"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
             </StackPanel>
         </DockPanel>
 
     </Grid>
-</Window>
+</Window>  
